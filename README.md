@@ -6,3 +6,5 @@ Very simple scripts. It reads questions.txt line by line and than you answer. Sa
 Also motivates you with lines from wisdoms.txt.
 
 Do it daily!
+
+P.S. Tried it only on Windows. Contains copyed code from SO.

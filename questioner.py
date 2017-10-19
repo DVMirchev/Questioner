@@ -18,11 +18,11 @@ def clearscreen(numlines=100):
 def extract_wisdom():
     """Reads wisdoms from the wisdom.txt file and returns tree random ones"""
     with open("wisdoms.txt", 'r', encoding='utf-8') as wisdoms:
-        return random.sample(wisdoms.readlines(), 3)
+        return random.sample(wisdoms.readlines(), 5)
 
 
 def print_wisdom():
-    """beauty prints a random wisdom"""
+    """beauty prints random wisdoms"""
     number_of_sharps = 80
     print('#' * number_of_sharps)
     print('#')

@@ -21,11 +21,15 @@ def extract_wisdom():
         return random.sample(wisdoms.readlines(), 5)
 
 
-def print_wisdom():
+def print_wisdoms_and_values():
     """beauty prints random wisdoms"""
     number_of_sharps = 80
     print('#' * number_of_sharps)
     print('#')
+    with open("values.txt", 'r', encoding='utf-8') as values:
+        print('#   VALUES: ', values.readline())
+    print('#')
+
     for winsdom in extract_wisdom():
         print('#  ', winsdom.rstrip())
         print('#')
@@ -61,7 +65,7 @@ def store_answered(answered_q):
 
 if __name__ == "__main__":
     clearscreen()
-    print_wisdom()
+    print_wisdoms_and_values()
     answered = get_answers()
     clearscreen()
     for q, a in answered:

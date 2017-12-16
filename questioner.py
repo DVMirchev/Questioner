@@ -23,7 +23,7 @@ def extract_wisdom():
 
 def print_wisdoms_and_values():
     """beauty prints random wisdoms"""
-    number_of_sharps = 80
+    number_of_sharps = 120
     print('#' * number_of_sharps)
     print('#')
     with open("values.txt", 'r', encoding='utf-8') as values:

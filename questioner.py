@@ -21,15 +21,27 @@ def extract_wisdom():
         return random.sample(wisdoms.readlines(), 5)
 
 
-def print_wisdoms_and_values():
-    """beauty prints random wisdoms"""
-    number_of_sharps = 120
-    print('#' * number_of_sharps)
+def print_resolutions():
+    """print resolutions for the year. Must be a single line"""
+    print('#')
+    with open("resolutions.txt", 'r', encoding='utf-8') as values:
+        print('#   Resolutions for {}: '.format(datetime.today().year), values.readline())
+
+
+def print_values():
+    """print values for the year. Must be a single line"""
     print('#')
     with open("values.txt", 'r', encoding='utf-8') as values:
         print('#   VALUES: ', values.readline())
-    print('#')
 
+
+def print_wisdoms():
+    """beauty prints random wisdoms"""
+    number_of_sharps = 120
+    print('#' * number_of_sharps)
+    print_values()
+    print_resolutions()
+    print('#')
     for winsdom in extract_wisdom():
         print('#  ', winsdom.rstrip())
         print('#')
@@ -65,7 +77,7 @@ def store_answered(answered_q):
 
 if __name__ == "__main__":
     clearscreen()
-    print_wisdoms_and_values()
+    print_wisdoms()
     answered = get_answers()
     clearscreen()
     for q, a in answered:

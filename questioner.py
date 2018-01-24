@@ -64,9 +64,9 @@ def get_answers():
 
 
 def store_answered(answered_q):
-    """Writes a list of tuples (question, answer) to a folder ./store/*YEAR*/*MONTH*/*DAY*.txt"""
+    """Writes a list of tuples (question, answer) to a folder ./Storage/*YEAR*/*MONTH*/*DAY*.txt"""
     today = datetime.today()
-    folder = "store" + "/" + str(today.year) + "/" + str(today.month)
+    folder = "Storage" + "/" + str(today.year) + "/" + str(today.month)
     os.makedirs(folder, exist_ok=True)
     filename = folder + "/" + str(today.day) + ".txt"
     with open(filename, "a", encoding="utf-8") as outfile:
